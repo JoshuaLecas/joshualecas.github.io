@@ -16,22 +16,31 @@
     margin-top: -100px;
     margin-left: -200px;
     }
-      body {
-    opacity: 1;
-    transition: 1s opacity;
-    }
-    body.fade-out {
-    opacity: 0;
-    transition: none;
-    }
+     
     </style>
   </head>
   <body>
-   <script>document.body.className += ' fade-out';
-    </script>
-    <script>$(function() {
-    $('body').removeClass('fade-out');
-      });</script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	jQuery('body').css('display','none');
+	jQuery(document).ready(function() {
+		jQuery('body').fadeIn();
+		jQuery('a').on('click',function(event){
+			var thetarget = this.getAttribute('target')
+			if (thetarget != "_blank"){			
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				jQuery('body').fadeOut(function(){
+					//alert(thehref)
+					window.location = thehref					
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		jQuery('body').fadeIn();
+	},1000)
+</script>
 <!--
     <div class="navbar">
       <div class="dropdown">
