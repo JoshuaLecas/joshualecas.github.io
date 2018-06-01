@@ -30,7 +30,7 @@
 			if (thetarget != "_blank"){			
 				var thehref = this.getAttribute('href')
 				event.preventDefault();
-				jQuery('body').fadeOut(function(){
+				jQuery('body').fadeOut("slow",function(){
 					//alert(thehref)
 					window.location = thehref					
 				});
