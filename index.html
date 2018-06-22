@@ -7,14 +7,22 @@
     <link rel="shortcut icon" type="img/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
+
+  <script type = "text/javascript">
+  $(document).ready(function(){
+  $("#menuBtn").hover(function(){
+    $("dropDownContent").slideDown(200);
+  })
+})
+</script>
   <body>
 
     <div class="navbar">
       <div class="dropdown">
-        <button class="dropbtn">MENU
+        <button id = "#menuBtn" class="dropbtn">MENU
           <i class="fa fa-caret-down"></i>
         </button>
-      <div class="dropdown-content">
+      <div id = "#dropDownContent" class="dropdown-content">
         <a href="#">Home</a>
         <a href="#">About Me</a>
         <a href="#">Projects</a>
