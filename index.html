@@ -6,35 +6,38 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" type="img/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#dropbtn").click(function(){
+        $("$menuitems").hide();
+      });
+    });
+
+    </script>
   </head>
-
-  <script type = "text/javascript">
-  $(document).ready(function(){
-  $("#menuBtn").hover(function(){
-    $("dropDownContent").slideDown(200);
-  })
-})
-</script>
   <body>
+    <div class="dropdown">
+      <button id="#dropbtn" class="dropbtn" style="font-size: 30px">MENU
+      </button>
+    <div id="#menuitems" class="dropdown-content">
+      <a href="#">Home</a>
+      <a href="#">About Me</a>
+      <a href="#">Projects</a>
+      <a href="#">Photography</a>
+      <a href="#">Contact</a>
+    </div>
+    </div>
+    <div class="header">
+      <div class="head-text">
+        <h1 style= "font-size: 75px">Welcome to my website</h1>
 
-    <div class="navbar">
-      <div class="dropdown">
-        <button id = "#menuBtn" class="dropbtn">MENU
-          <i class="fa fa-caret-down"></i>
-        </button>
-      <div id = "#dropDownContent" class="dropdown-content">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Projects</a>
-        <a href="#">Photography</a>
-        <a href="#">Contact</a>
-      </div>
       </div>
     </div>
 
 
 
-      <h1>Site under construction, check back soon!</h1>
+
+</body>
 
 </html>
